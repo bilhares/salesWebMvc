@@ -21,10 +21,9 @@ namespace SalesWebMvc.Services
             return _context.Seller.ToList();
         }
 
-        public void Insert(Seller s)
+        public void Insert(Seller seller)
         {
-            s.Department = _context.Department.First();
-            _context.Add(s);
+            _context.Add(seller);
             _context.SaveChanges();
         }
     }
